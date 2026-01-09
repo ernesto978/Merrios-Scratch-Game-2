@@ -4,7 +4,7 @@ import React from 'react';
 const Logo: React.FC = () => (
   <div className="relative flex items-center justify-center w-64 h-24">
     <img 
-      src="logo.png" 
+      src="https://www.edic.pt/wp-content/uploads/2026/01/Logo_DG.jpg" 
       alt="Délices Gourmandises" 
       className="max-w-full max-h-full object-contain"
       onError={(e) => {
