@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jeu de Grattage Délices</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Montserrat', sans-serif;
+        background-color: #1e3a8a; /* Bleu FDJ */
+        margin: 0;
+        padding: 0;
+      }
+      .font-playfair {
+        font-family: 'Playfair Display', serif;
+      }
+      /* Fond inspiré des jeux à succès français */
+      .scratch-bg {
+        background: radial-gradient(circle at 50% 50%, #2563eb 0%, #1e40af 50%, #1e3a8a 100%);
+        position: relative;
+        overflow-x: hidden;
+      }
+      /* Effet rayons de soleil typique des cartes de grattage */
+      .sunburst-overlay {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        width: 200vmax;
+        height: 200vmax;
+        background: repeating-conic-gradient(
+          from 0deg,
+          rgba(255, 255, 255, 0.05) 0deg 10deg,
+          transparent 10deg 20deg
+        );
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+        z-index: 0;
+      }
+      .gold-border {
+        border: 4px solid #fbbf24;
+        box-shadow: 0 0 20px rgba(251, 191, 36, 0.5);
+      }
+      .scratch-canvas {
+        cursor: crosshair;
+        touch-action: none;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
